@@ -1,0 +1,133 @@
+/* Fondo de pantalla personalizado */
+body {
+  background: url('fondo.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Contenedor del título */
+.title-container {
+  background-color: rgba(0, 0, 0, 0.5); /* Gris oscuro semi-transparente */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Título con animación de desvanecimiento */
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  animation: fadeIn 2s ease-in-out infinite alternate;
+  color: white;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+/* Borde curvo para imágenes */
+.carousel-inner img,
+#binaryImage {
+  border-radius: 20px;
+  object-fit: cover;
+  max-height: 100%; /* Mantener proporcionalidad */
+}
+
+/* Asegurar que todos los textos sean blancos */
+h1, h3, h5, #emptySpaces, #countdown {
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Evitar barras deslizadoras innecesarias */
+body {
+  overflow-x: hidden;
+}
+
+
+
+
+.floating-images {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.floating-bubble {
+  position: absolute;
+  width: 250px; /* Ajuste de tamaño */
+  height: 250px; /* Ajuste de tamaño */
+  border-radius: 50%;
+  overflow: hidden;
+  animation: float 15s infinite ease-in-out;
+}
+
+.floating-bubble img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(100px, -80px);
+  }
+  50% {
+    transform: translate(-150px, 100px);
+  }
+  75% {
+    transform: translate(120px, 80px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+/* Variación de posiciones iniciales para 6 imágenes */
+.floating-bubble:nth-child(1) {
+  top: 5%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.floating-bubble:nth-child(2) {
+  top: 15%;
+  left: 35%;
+  animation-delay: 2s;
+}
+
+.floating-bubble:nth-child(3) {
+  top: 40%;
+  left: 60%;
+  animation-delay: 4s;
+}
+
+.floating-bubble:nth-child(4) {
+  top: 20%;
+  left: 80%;
+  animation-delay: 6s;
+}
+
+.floating-bubble:nth-child(5) {
+  top: 50%;
+  left: 20%;
+  animation-delay: 8s;
+}
+
+.floating-bubble:nth-child(6) {
+  top: 60%;
+  left: 70%;
+  animation-delay: 10s;
+}
